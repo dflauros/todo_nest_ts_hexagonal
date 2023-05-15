@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Response, TaskDTO } from '../models';
 import ManagerTasksStubAdapter from './adapters/drivers/manager-tasks-stub.adapter.driver';
-import { TaskChecker } from '../application/middlewares/todo-middlewares';
 
 @Injectable()
 export class TasksService {
