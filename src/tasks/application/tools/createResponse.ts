@@ -12,9 +12,9 @@ export const CreateResponse = (
   status: HttpStatus = HttpStatus.OK,
   error: any = initResponse.error,
 ): Response => {
-  const isCodeError = codeToReturn.toString().match(/^[4,5]/g).length > 0;
+  const codeError = codeToReturn.toString().match(/^[4,5]/g);
 
-  if (isCodeError) {
+  if (codeError) {
     const err = {
       ...initResponse,
       code: codeToReturn,
